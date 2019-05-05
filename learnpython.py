@@ -47,6 +47,7 @@ else:
     print("All other condition were False")
 
 #Loops
+print(" ==== For Loop ====")
 seq = [1,2,3,4,5]
 for item in seq: #the item is a temporary variable name 
     print("hello") #just show 5 hello
@@ -63,8 +64,28 @@ for employee in personelSalaries:
 
 #Tuple Unpacking
 myPairs = [('a', 1), ('b', 34), ('c', 103)]
+print("===== ===== ===== TUPLE ===== ===== =====")
+#len = length
+print(len(myPairs)) #print how many tuple pairs
+
+for items in myPairs:
+    print(items)
+
 for item1, item2 in myPairs:
     print(item1)
     print(item2)
 
-print("so confusing")
+# While Loop and 
+print("==== while loop ====")
+i = 1
+while i < 5: 
+    print (f"i is currently: {i}")
+    i = i+1
+
+# Range
+for x in range(0,5):
+    print (x)
+xResult = list(range(0, 11, 2)) #The third variable is the stepping, so step 0, 2, 4, ...
+print(xResult)
+
+print('s' in 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.') #the 'in' function is to see if there is 's' inside a very long string  - the element is inside the the other 
