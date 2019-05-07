@@ -28,3 +28,62 @@ def add_num1(num1, num2):
 
 result1 = add_num1(4,3)
 print (result1 + 10) # This will finally add the add_num + 10
+
+# Max and Min
+print ("==== Max - Min ====")
+print (max(10,4))
+print (max([2,5,10,1,100,67,85, 11])) #The max or min can be used on a list. It will print the hightest or lowest value.
+
+#Enumerate
+#The usage of enumerate is to shows the index of the list.
+print("")
+print("==== Enumerate ====")
+mylist = ['a', 'b', 'c', 'd']
+for index,item in enumerate(mylist):
+    print(f"item {item} is at index {index}")
+
+#.join
+print("=== Join ===")
+print("--".join(mylist))
+
+#Exercise one: return True if there is a word "Secret" in the string
+def secret_check(mystring):
+    if 'secret' in mystring:
+        return True
+    else:
+        return False
+
+print(secret_check("There is a secret word"))
+
+#There is a shorter way to do this function
+def check_secretword(mystring):
+    return 'secret' in mystring #basically the return value already return true or false, so save the long if statement.
+
+print(secret_check("There is secret in the air"))
+
+#Exerise two: Change the vowel to x, and print out the string
+def replace_vowel(theString):
+    output = list(theString)
+
+    for index,theLetter in enumerate(theString):
+        for vowel in 'aeiou':
+            if theLetter.lower() == vowel:
+                output[index] = 'x'
+    output = ''.join(output)
+    return output
+
+print(replace_vowel("biomechanics"))
+
+# Modulus Operator %
+print("==== Modulus Operator ====")
+def even_odd_check(number1):
+    if number1 % 2 == 0:
+        print("number is even")
+    else:
+        print("number is odd")
+
+even_odd_check(37)
+
+# sum 
+print(sum([2,4,5,10,101,23]))
+
