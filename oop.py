@@ -97,8 +97,8 @@ print("")
 print ("==== OOP Inheritance ====")
 
 class Animal():
-    def __init__(self):
-        print("Animal Created")
+    def __init__(self, fur):
+        self.fur = fur
     
     def report(self):
         print("animal")
@@ -106,20 +106,21 @@ class Animal():
     def eat(self):
         print("eating!")
 
-a = Animal()
+a = Animal('yellow')
 a.eat()
 a.report()
 
 class Dog(Animal):
-    def __init__(self):
-        Animal.__init__(self)
+    def __init__(self, fur):
+        Animal.__init__(self, fur)
         print("dog created")
     
     def report(self): #You can override the animal method by creating another report
         print("This is from Dog class")
 
 print("=== called from inheritance ===")
-d = Dog()
+d = Dog('Fuzzy')
 d.eat()
 d.report()
+print(d.fur)
 
